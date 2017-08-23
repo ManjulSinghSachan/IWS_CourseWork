@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset='UTF-8'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Blog Post - Photoshop Tutorial</title>
+	<style>
+	body{
+		font-family: Arial;
+		background-color: #000000;
+		color: #ffffff;
+	}
+	img.sectionImg{
+		height: 300px;
+		width: 250px;
+		border-radius: 20px;
+		margin-left: 30px;
+		margin-bottom: 10px;
+	}
+	img.asideImg{
+		height: 20px;
+		width: 20px;
+		margin-right: 10px;
+	}
+	aside{
+		float: right;
+		margin-top: 107px;
+		border-radius: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		background-color: #1a1a1a;
+	}
+	nav.topnav{
+        background-color: #e65c00;
+        overflow: hidden;
+    }
+    nav.topnav ul{
+        list-style-type: none;
+
+    }
+    nav.topnav li a {
+		display: block;
+		float: left;
+		color: #ffffff;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+
+	nav.topnav li a.active {
+		background-color: #4CAF50;
+		color: white;
+	}
+
+	nav.topnav li a:hover:not(.active) {
+		background-color: #1a1a1a;
+	}
+	
+	nav.asideNav ul{
+		list-style-type: none;
+	}
+	
+	nav.asideNav li a{
+		display: block;
+		color: #ffffff;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+	
+	nav.asideNav li a:hover {
+		background-color: #e65c00;
+	}
+	
+	section{
+		background-color: #1a1a1a;
+		border-radius: 20px;
+		width: 60%;
+		
+	}
+	
+	h4.sectionHeader{
+		padding-left: 30px;
+		padding-top: 20px;
+	}
+	
+	footer.mainFooter{
+		text-align: center;
+	}
+	
+	footer.mainFooter a{
+		text-decoration: none;
+		color: #ffffff;
+	}
+	
+	footer.articleFooter{
+		font-size: 10px;
+		margin-left: 30px;
+	}
+	
+	h1.pageHeader{
+		margin-left: 10px;
+		margin-top: 5px;
+	}
+	
+	header.articleHeader{
+		margin-left: 10px;
+		margin-top: 5px;
+	}
+	</style>
+
+
+</head>
+
+<body>
+
+	<header>
+		<h1 class="pageHeader"> Photoshop Tutorials </h1>
+		<nav class="topnav">
+			<ul>
+				<li><a href='#'> News </a></li>
+				<li><a href='#'> Blog </a></li>
+				<li><a href='#'> Forum </a></li>
+			</ul>
+		</nav>
+	</header>
+	<aside>
+    <nav class="asideNav">
+      <h2>Top posts</h2>
+      <ul>
+        <li><a href="#"><img src = "logo.png" class="asideImg">Create a retro style effect in Photoshop in 60 seconds</a></li>
+		<li><a href="#"><img src = "logo.png" class="asideImg">Designing logos inspired from things in nature</a></li>
+		<li><a href="#"><img src = "logo.png" class="asideImg">Tutorial on masking and layering</a></li>
+	  </ul>
+    </nav>
+    <nav class="asideNav">
+      <h2>Recent posts</h2>
+      <ul>
+        <li><a href="#"><img src = "logo.png" class="asideImg">Best designers in the world and their styles</a>
+        <li><a href="#"><img src = "logo.png" class="asideImg">How to remove background from your images</a>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+		<article>
+			<header class="articleHeader">
+				<h2>Create a low-poly effect for your photo</h2>
+				<p> Author: Manjul Sachan </p>
+			</header>
+			<section>
+				<h4 class="sectionHeader">Find a photo with good contrast and brightness.</h4>
+				<img src="1.jpg" class="sectionImg">
+			</section>
+			<section>
+				<h4 class="sectionHeader">Remove the background using lasso and pen tools.</h4>
+				<img src="2.jpg" class="sectionImg">
+			</section>
+			<section>
+				<h4 class="sectionHeader">Using the brush tool, make triangles on a different layer.</h4>
+				<img src="4.jpg" class="sectionImg">
+			</section>
+			<section>
+				<h4 class="sectionHeader">Cover the whole photo with these triangles.</h4>
+				<img src="5.jpg" class="sectionImg">
+			</section>
+			<section>
+				<h4 class="sectionHeader">Now open Adobe Illustrator and make a vector mesh using the pen tool and keeping the pre-made triangles as a background.</h4>
+				<img src="9.jpg" class="sectionImg">
+			</section>
+			<section>
+				<h4 class="sectionHeader">Select each triangle and then using the dropper tool choose the color inside that triangle and fill it.</h4>
+				<img src="10.png" class="sectionImg">
+			</section>
+			<footer class="articleFooter">
+				<p>Posted <time datetime="2017-08-16">Thursday</time>.</p>
+			</footer>
+		</article>
+    
+	</main>
+	<footer class="mainFooter">
+		<p>Copyright ©
+		<span>2017</span>
+		<span>Manjul Singh Sachan</span>
+		</p>
+		<nav>
+		<p><a href="about.html">About</a> -
+		<a href="policy.html">Privacy Policy</a> -
+		<a href="contact.html">Contact Us</a></p>
+		</nav>
+	</footer>
+
+
+</body>
+</html>
