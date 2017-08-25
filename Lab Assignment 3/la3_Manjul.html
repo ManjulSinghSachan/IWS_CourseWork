@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		
+		<meta charset='UTF-8'/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Lab Assignment 3</title>
+		
+		<style>
+		
+			body{
+				background-color: #6699ff;
+				color: #193366;
+				text-align: center;
+			}
+		
+			svg{
+				width: 15%;
+				height: 50%;
+				display: inline;
+				margin-left: 30px;				
+			}
+			
+			form{
+				display: none;
+				margin-bottom: 10px;
+			}
+			
+			#circleSvg circle{
+				fill:#0099ff;
+				stroke-width:5;
+				stroke:#ffffff;
+			}
+			
+			#triangleSvg polygon{
+				fill:#0099ff;
+				stroke-width:5;
+				stroke:#ffffff;
+			}
+			
+			#squareSvg polygon{
+				fill:#0099ff;
+				stroke-width:5;
+				stroke:#ffffff;
+			}
+			
+			#rectangleSvg{
+				fill:#0099ff;
+				stroke-width:5;
+				stroke:#ffffff;
+			}
+			
+			#hexagonSvg{
+				fill:#0099ff;
+				stroke-width:5;
+				stroke:#ffffff;
+			}
+			
+			#resetBtn{
+				display: none;
+			}
+			
+			#resetBtn input{
+				height: 70px;
+				width: 150px;
+			}
+			
+			input{
+				margin-bottom: 10px;
+			}
+		
+		</style>
+		
+		<script>
+			
+			function displayForm(id){
+			
+				if(id == "circleSvg"){
+					document.getElementById("circleForm").style.display = "block";
+				}else if(id == "triangleSvg"){
+					document.getElementById("triangleForm").style.display = "block";
+				}else if(id == "squareSvg"){
+					document.getElementById("squareForm").style.display = "block";
+				}else if(id == "rectangleSvg"){
+					document.getElementById("rectangleForm").style.display = "block";
+				}else if(id == "hexagonSvg"){
+					document.getElementById("hexagonForm").style.display = "block";
+				}
+				
+				hideOthers(id);
+			}
+			
+			function hideOthers(id) {
+				
+				var x = document.getElementsByTagName("svg");
+				var i;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				
+				document.getElementById(id).style.display = "inline";
+				document.getElementById("resetBtn").style.display = "inline";
+
+			}
+			
+			function reset(){
+				var x = document.getElementsByTagName("svg");
+				var i;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "inline";
+				}
+				
+				document.getElementById("resetBtn").style.display = "none";
+			}
+			
+			function calculateArea(id){
+				
+				var x,y;
+				var area;
+				
+				if(id == "circleArea"){
+						x = document.getElementById("radius").value;
+						area = 3.141 * x * x;
+				}
+				else if(id == "triangleArea"){
+						x = document.getElementById("height").value;
+						y = document.getElementById("base").value;
+						area = 0.5 * x * y;
+				}
+				else if(id == "squareArea"){
+						x = document.getElementById("sqlength").value;
+						area = x * x;
+				}
+				else if(id == "rectangleArea"){
+						x = document.getElementById("rectlength").value;
+						y = document.getElementById("rectbreadth").value;
+						area = x * y;
+				}
+				else if(id == "hexagonArea"){
+						x = document.getElementById("hexalength").value;
+						area = 3 * 1.73 * 0.5 * x * x;
+				}
+				
+				document.getElementById("displayResult").innerHTML = "Area = " + area;
+				
+			}
+			
+			function calculatePeri(id){
+				
+				var x,y;
+				var perimeter;
+				
+				if(id == "circlePeri"){
+						x = document.getElementById("radius").value;
+						perimeter = 3.141 * 2 * x;
+				}
+				else if(id == "trianglePeri"){
+						x = document.getElementById("height").value;
+						y = document.getElementById("base").value;
+						perimeter = "Sufficient information not available!";
+				}
+				else if(id == "squarePeri"){
+						x = document.getElementById("sqlength").value;
+						perimeter = 4 * x;
+				}
+				else if(id == "rectanglePeri"){
+						x = document.getElementById("rectlength").value;
+						y = document.getElementById("rectbreadth").value;
+						console.log(x);
+						console.log(y);
+						perimeter = 2 * (+x + +y);
+						console.log(perimeter);
+				}
+				else if(id == "hexagonPeri"){
+						x = document.getElementById("hexalength").value;
+						perimeter = 6 * x ;
+				}
+				
+				document.getElementById("displayResult").innerHTML = "Perimeter = " + perimeter;
+				
+			}
+		
+		</script>
+	
+	</head>
+	<body>
+
+		<h1>Choose a shape to calculate its area and perimeter.</h1>
+
+		<svg id = "circleSvg" onclick = "displayForm(id)">
+
+			<circle cx="50" cy="50" r="45" />
+		
+		</svg>
+		<svg id = "triangleSvg" onclick = "displayForm(id)">
+
+			<polygon points="60,10 110,110 10,110" />
+		
+		</svg>
+		<svg id = "squareSvg" onclick = "displayForm(id)">
+
+			<polygon points="10,10 100,10 100,100 10,100" />
+		
+		</svg>
+		<svg id = "rectangleSvg" onclick = "displayForm(id)">
+			
+			<polygon points="10,10 150,10 150,100 10,100" />
+		
+		</svg>
+		<svg id = "hexagonSvg" onclick = "displayForm(id)">
+
+			<polygon points="60,10 100,40 100,80 60,110 20,80 20,40" />
+		
+		</svg>
+		
+		
+		<form id = "circleForm">
+			<h2>Radius of the circle:<br></h2>
+			<input type="text" id="radius"><br>
+			
+			<input id = "circleArea" type="button" value="Calculate Area" onclick = "calculateArea(id)">
+			<input id = "circlePeri" type="button" value="Calculate Perimeter" onclick = "calculatePeri(id)">
+		</form>
+		
+		<form id = "triangleForm">
+			<h2>Height of the triangle:<br></h2>
+			<input type="text" id="height"><br>
+			<h2>Base of the triangle:<br></h2>
+			<input type="text" id="base"><br>
+			
+			<input id = "triangleArea" type="button" value="Calculate Area" onclick = "calculateArea(id)">
+			<input id = "trianglePeri" type="button" value="Calculate Perimeter" onclick = "calculatePeri(id)">
+		</form>
+		
+		<form id = "squareForm">
+			<h2>Side length of the square:<br></h2>
+			<input type="text" id="sqlength"><br>
+			
+			<input id = "squareArea" type="button" value="Calculate Area" onclick = "calculateArea(id)">
+			<input id = "squarePeri" type="button" value="Calculate Perimeter" onclick = "calculatePeri(id)">
+		</form>
+		
+		<form id = "rectangleForm">
+			<h2>Length of the rectangle:<br></h2>
+			<input type="text" id="rectlength"><br>
+			<h2>Breadth of the rectangle:<br></h2>
+			<input type="text" id="rectbreadth"><br>
+			
+			<input id = "rectangleArea" type="button" value="Calculate Area" onclick = "calculateArea(id)">
+			<input id = "rectanglePeri" type="button" value="Calculate Perimeter" onclick = "calculatePeri(id)">
+		</form>
+		
+		<form id = "hexagonForm">
+			<h2>Side length of the hexagon:<br></h2>
+			<input type="text" id = "hexalength"><br>
+			
+			<input id = "hexagonArea" type="button" value="Calculate Area" onclick = "calculateArea(id)">
+			<input id = "hexagonPeri" type="button" value="Calculate Perimeter" onclick = "calculatePeri(id)">
+		</form>
+		
+		<form id = "resetBtn">
+			<input type="submit" value="Reset" onclick="reset()">
+		</form>
+		
+		<h1 id = "displayResult">Result here!</h1>
+
+	</body>
+	
+</html> 
