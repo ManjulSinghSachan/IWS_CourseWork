@@ -1,0 +1,93 @@
+.logo{
+  font-size: 90px;
+  line-height: 50px;
+  color: #551A8B;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Times New Roman",Times,serif;
+  font-stretch: expanded;
+  width: 100%;
+  margin-bottom: 30px;
+  border: 0;
+}
+
+.logo sup{
+  font-size: 20%;
+  vertical-align: super;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: #551A8B;
+  border-radius: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ffffff;
+  background-color: #41146B;
+}
+
+.navbar-default .navbar-nav > li > a:focus{
+  background-color: #270C40;
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+  background-color: #270C40;
+}
+
+.search-bar{
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+}
+
+.search-bar button{
+  background-color: #551A8B;
+  color: #ffffff;
+  width: 150px;
+}
+
+.search-bar .input-group{
+  padding: 10px;
+}
+
+.main-header{
+  margin-bottom: 20px;
+  padding-left: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #f2f2f2;
+  color: #999999;
+}
+
+.panel-default{
+  background-color: #551A8B;
+}
+
+.panel-default .panel-footer{
+  background-color: #551A8B;
+  color: #ffffff;
+}
+
+ .jumbotron {
+  margin-bottom: 0;
+  background-color: #ffffff;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.clfooter{
+  list-style: none;
+}
+
+.clfooter li{
+  display: inline;
+  padding: 0 4px;
+}

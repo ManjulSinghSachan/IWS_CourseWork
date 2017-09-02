@@ -1,51 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <title>Craigslist</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
 
-    .logo{
-      font-size: 90px;
-      line-height: 50px;
-      color: #551A8B;
-      text-align: center;
-      font-weight: 500;
-      font-family: "Times New Roman",Times,serif;
-      font-stretch: expanded;
-      width: 100%;
-      margin-bottom: 30px;
-      border: 0;
-    }
-
-    .logo sup{
-      font-size: 20%;
-      vertical-align: super;
-    }
-
-    /* Remove the navbar's default rounded borders and increase the bottom margin */
-    .navbar {
-      margin-bottom: 50px;
-      background-color: #551A8B;
-      border-radius: 0;
-    }
-
-    /* Remove the jumbotron's default bottom margin */
-     .jumbotron {
-      margin-bottom: 0;
-      background-color: #ffffff;
-    }
-
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-  </style>
 </head>
 <body>
 
@@ -70,7 +34,7 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-th-list"></span> Categories</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
@@ -83,28 +47,40 @@
   </div>
 </nav>
 
+<div class="search-bar">
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" placeholder="Search for items, services, jobs ..." required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<main>
+  <header class="main-header">
+    <h3> Trending in Ghaziabad... </h3>
+  </header>
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+      <a href="#"><div class="panel panel-default">
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
+        <div class="panel-footer">Item name and price</div>
+      </div></a>
     </div>
     <div class="col-sm-4">
-      <div class="panel panel-danger">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+      <a href="#"><div class="panel panel-default">
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
+        <div class="panel-footer">Item name and price</div>
+      </div></a>
     </div>
     <div class="col-sm-4">
-      <div class="panel panel-success">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+      <a href="#"><div class="panel panel-default">
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
+        <div class="panel-footer">Item name and price</div>
+      </div></a>
     </div>
   </div>
 </div><br>
@@ -112,35 +88,41 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+      <a href="#"><div class="panel panel-default">
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
+        <div class="panel-footer">Item name and price</div>
+      </div></a>
     </div>
     <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+      <a href="#"><div class="panel panel-default">
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
+        <div class="panel-footer">Item name and price</div>
+      </div></a>
     </div>
     <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+      <a href="#"><div class="panel panel-default">
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
+        <div class="panel-footer">Item name and price</div>
+      </div></a>
     </div>
   </div>
-</div><br><br>
+</div>
+</main><br><br>
 
 <footer class="container-fluid text-center">
-  <p>Online Store Copyright</p>
-  <form class="form-inline">Get deals:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
-  </form>
+  <p>©  craigslist</p>
+  <ul class="clfooter">
+        <li><a href="https://www.craigslist.org/about/help">help</a></li>
+        <li><a href="https://www.craigslist.org/about/scams">safety</a></li>
+        <li class="desktop"><a href="https://www.craigslist.org/about/privacy.policy">privacy</a></li>
+        <li class="desktop"><a href="https://forums.craigslist.org/?forumID=8">feedback</a></li>
+        <li class="desktop"><a href="https://www.craigslist.org/about/craigslist_is_hiring">cl jobs</a></li>
+        <li><a href="//www.craigslist.org/about/terms.of.use.en">terms</a></li>
+        <li><a href="https://www.craigslist.org/about/">about</a></li>
+        <li class="fsel desktop linklike" data-mode="mobile">mobile</li>
+        <li class="fsel mobile linklike" data-mode="regular">desktop</li>
+    </ul>
+    <p>© Manjul Singh Sachan</p>
 </footer>
 
 </body>
