@@ -40,6 +40,20 @@
   background-color: #270C40;
 }
 
+.navbar-default .navbar-nav .dropdown-menu> li > a:hover {
+  color: #ffffff;
+  background-color: #41146B;
+}
+
+.navbar-default .navbar-nav .dropdown-menu> li > a:focus{
+  background-color: #270C40;
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav .dropdown-menu> li > a:active {
+  background-color: #270C40;
+}
+
 .search-bar{
   margin-bottom: 20px;
   background-color: #f2f2f2;
